@@ -9,7 +9,7 @@ app.register_blueprint(api_bp)
 # app.register_blueprint(client_bp)
 
 from .config import Config
-app.logger.info('>>> {}'.format(Config.FLASK_ENV))
+app.logger.info(f'>>> {Config.FLASK_ENV}')
 
 @app.route('/')
 def index_client():

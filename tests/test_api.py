@@ -39,5 +39,4 @@ def request_context():
 
 def test_session(request_context):
     with request_context:
-        # Do something that requires request context
-        assert True
+        pass
