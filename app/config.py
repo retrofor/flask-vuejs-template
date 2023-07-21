@@ -4,8 +4,11 @@ Global Flask Application Setting
 See `.flaskenv` for default settings.
  """
 
+
 import os
 from app import app
+
+
 
 
 class Config(object):
@@ -19,7 +22,7 @@ class Config(object):
     DIST_DIR = os.path.join(ROOT_DIR, 'dist')
 
     if not os.path.exists(DIST_DIR):
-        raise Exception(
-            'DIST_DIR not found: {}'.format(DIST_DIR))
+        raise Exception(f'DIST_DIR not found: {DIST_DIR}')
+
 
 app.config.from_object('app.config.Config')
